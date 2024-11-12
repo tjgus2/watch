@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    border: 2px solid orange
+}
+
+#container {
+    border: 2px black;
+    background-color: blanchedalmond;
+}
+
+#clock {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#alarm-container {
+    margin-bottom: 20px;
+}
+
+#alarm {
+    display: flex;
+    align-items: center;
+    padding: 20px
+}
+
+#clocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2열 */
+    grid-template-rows: 1fr 1fr;    /* 2행 */
+    gap: 10px;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    grid-template-areas: 
+        "top-left top-right"
+        "bottom-left bottom-right";
+}
+
+#clocks p:nth-of-type(1) {
+    grid-area: top-left;
+}
+
+#clocks p:nth-of-type(2) {
+    grid-area: top-right;
+}
+
+#clocks #container:nth-of-type(1) {
+    grid-area: bottom-left;
+}
+
+#clocks #container:nth-of-type(2) {
+    grid-area: bottom-right;
+}
+
+

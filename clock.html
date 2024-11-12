@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="battery">
+        <div id="container">배터리: 100%</div>
+    </div>
+
+    <div id="clocks">
+        <p>시간</p>
+        <p>알림현황</p>
+        <div id="container"></div> <!-- 현재 날짜와 시간 -->
+        <div id="container"></div> <!-- 알람 현황 -->
+    </div>
+    <div id="alarm"> 
+        <p>알람</p>  
+        <input type="input" id="hours" placeholder="시">
+        <input type="input" id="minutes" placeholder="분">
+        <input type="input" id="seconds" placeholder="초">
+        <button id="add-alarm">추가</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
