@@ -5,33 +5,29 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #f0f0f0;
-    border: 2px solid orange
+    border: 2px solid orange;
 }
 
-#container {
+#battery-container,
+#time-container,
+#alarm-container {
     border: 2px solid black;
     background-color: blanchedalmond;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
 }
 
-#clock {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-#alarm-container {
-    margin-bottom: 20px;
-}
-
-#alarm {
-    display: flex;
-    align-items: center;
-    padding: 20px
+#current-time {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 #clocks {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2열 */
-    grid-template-rows: 1fr 1fr;    /* 2행 */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
     width: 300px;
     height: 200px;
@@ -42,20 +38,25 @@ body {
         "bottom-left bottom-right";
 }
 
-#clocks p:nth-of-type(1) {
+#clocks .top-left {
     grid-area: top-left;
 }
 
-#clocks p:nth-of-type(2) {
+#clocks .top-right {
     grid-area: top-right;
 }
 
-#clocks #container:nth-of-type(1) {
+#clocks #time-container {
     grid-area: bottom-left;
 }
 
-#clocks #container:nth-of-type(2) {
+#clocks #alarm-container {
     grid-area: bottom-right;
 }
 
-
+#alarm {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+}

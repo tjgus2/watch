@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="battery">
-        <div id="container">배터리: 100%</div>
-    </div>
+    <div id="battery-container">배터리: 100%</div>
 
     <div id="clocks">
-        <p>시간</p>
-        <p>알림현황</p>
-        <div id="container"></div> <!-- 현재 날짜와 시간 -->
-        <div id="container"></div> <!-- 알람 현황 -->
+        <p class="top-left">시간</p>
+        <p class="top-right">알림현황</p>
+        <div id="time-container">
+            <div id="current-time"></div> <!-- 현재 시간 -->
+        </div>
+        <div id="alarm-container">알람 현황</div>
     </div>
+
     <div id="alarm"> 
         <p>알람</p>  
-        <input type="input" id="hours" placeholder="시">
-        <input type="input" id="minutes" placeholder="분">
-        <input type="input" id="seconds" placeholder="초">
+        <input type="number" id="hours" placeholder="시" min="0" max="23" step="1">
+        <input type="number" id="minutes" placeholder="분" min="0" max="59" step="1">
+        <input type="number" id="seconds" placeholder="초" min="0" max="59" step="1">
         <button id="add-alarm">추가</button>
     </div>
     <script src="script.js"></script>
